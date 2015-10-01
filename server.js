@@ -57,7 +57,6 @@ router.route('/push')
 
   // Receive the request to print
   .post(function(req, res) {
-    console.log(req);
     var data = req.body;
     Pushbots.setMessage(data.message ,1);
     Pushbots.customFields({"article_id": data.field});
